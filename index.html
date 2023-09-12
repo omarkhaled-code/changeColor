@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change BG With Form</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container form input {
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+        }
+    </style>
+    <div class="container">
+        <form>
+            <input type="color" id="color">
+        </form>
+    </div>
+    <script>
+        let color = document.querySelector("#color")
+        color.oninput = () => {
+            document.body.style.backgroundColor = color.value
+        }
+    </script>
+</body>
+
+</html>
